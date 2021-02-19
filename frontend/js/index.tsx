@@ -1,32 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import { Menu } from './util';
+import Header from './header';
+import Footer from './footer';
+import Body from './main';
+
+import '../css/app.scss';
 
 
-const Header = () => (
-  <header>
-    <div className='header-footer__inner'>
-      <div className='header__logo'>My closet</div>
-      <Menu />
-    </div>
-  </header>
-);
-
-
-const Footer = () => (
-  <footer>
-    <div className='header-footer__inner'>
-      <Menu />
-      <small>&copy; 2021 JIEI</small>
-    </div>
-  </footer>
-);
-
-
-const App = () => (
+const App: React.FC = (): React.ReactElement => (
   <>
     <Header />
+    <Body />
     <Footer />
   </>
 );
